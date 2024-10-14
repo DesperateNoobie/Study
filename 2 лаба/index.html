@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кайлас — Главная страница</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer; /* Добавлено для указателя при наведении */
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .search-form {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .search-form input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6600;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Кайлас</h1>
+        <p>Просто делай - а, Кайлас поможет</p>
+    </div>
+
+    <div class="nav">
+        <a href="#" onclick="showWarning('Скачать')">Скачать</a>
+        <a href="#" onclick="showWarning('Регистрация')">Регистрация</a>
+        <a href="#" onclick="showWarning('Войти')">Войти</a>
+        <a href="#" onclick="showWarning('Русский')">Русский</a>
+        <a href="#" onclick="showWarning('Английский')">Английский</a>
+    </div>
+
+    <div class="content">
+        <h2>Что такое Кайлас?</h2>
+        <p>В теории это программа для самоконтроля, которая будет ограничивать вашу активность на компьютере, телефоне и браузере.</p>
+        
+        <div class="search-form">
+            <form id="searchForm">
+                <input type="text" placeholder="Поиск по сайту" />
+                <input type="submit" value="Искать" />
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Предупреждение для навигационных элементов
+        function showWarning(section) {
+            alert(`Раздел "${section}" недоступен!`);
+        }
+
+        // Обработчик события отправки формы
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Функция поиска недоступна на данный момент.");
+        });
+    </script>
+
+</body>
+</html>
